@@ -6,7 +6,6 @@ void afficher_bilan(int scoreJoueur, int scoreOrdi)
 {
     printf("=== FIN DE LA PARTIE ===\n");
     printf("Score final -> Vous : %d | Ordi : %d\n", scoreJoueur, scoreOrdi);
-
     if (scoreJoueur > scoreOrdi)
     {
         printf("Bravo, vous avez gagné la partie !\n");
@@ -18,6 +17,42 @@ void afficher_bilan(int scoreJoueur, int scoreOrdi)
     else
     {
         printf("Match nul parfait !\n");
+    }
+}
+
+void afficher_choix(int choix)
+{
+    if (choix == 1)
+    {
+        printf("Pierre");
+    }
+    else if (choix == 2)
+    {
+        printf("Feuille");
+    }
+    else if (choix == 3)
+    {
+        printf("Ciseaux");
+    }
+    else if (choix == 4)
+    {
+        printf("Lézard");
+    }
+    else if (choix == 5)
+    {
+        printf("Spock");
+    }
+}
+
+void afficher_menu()
+{
+    int i;
+
+    for (i = 1; i <= 5; i++)
+    {
+        printf("%d = ", i);
+        afficher_choix(i);
+        printf("\n");
     }
 }
 
